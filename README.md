@@ -1,6 +1,6 @@
 # 学术新星机会雷达（Academic Opportunity Radar）
 
-这是 Tinghe Zhang 的个人"学术机会追踪看板"，由 AI 助手协助搜集整理，网页地址见 GitHub Pages（仓库 Settings → Pages 中查看）。
+这是一个个人"学术机会追踪看板"，由 AI 助手协助搜集整理，网页地址见 GitHub Pages（仓库 Settings → Pages 中查看）。
 
 - `index.html`：可视化看板页面，直接打开即可查看，按截止日期紧迫程度自动排序。
 - `data/opportunities.js`：数据源，每条机会包含类型、标签（A学术产出/B公开曝光/C资源网络/D履历里程碑）、截止日期、匹配度、行动建议。
