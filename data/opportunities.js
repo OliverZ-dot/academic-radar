@@ -1,4 +1,4 @@
-// 机会数据源。人工维护版本 v1（2026-08-08 由助手首次调研整理）。
+// 机会数据源。人工维护版本 v2（2026-08-08 由助手调研整理，新增导师匹配/实验室实习/演讲黑客松三大类）。
 // 后续由每日/每周自动化任务追加更新，或由你要求助手手动刷新。
 const LAST_UPDATED = "2026-08-08";
 
@@ -113,5 +113,121 @@ const OPPORTUNITIES = [
     status: "常态化关注",
     link: "https://www.qbitai.com/",
     note: "建议关注量子位、机器之心、智源社区的公众号，这类论坛通常靠自荐投稿研究成果+社群人脉获得邀请，不是标准报名流程，适合作为长期'刷脸'渠道。"
+  },
+
+  // ---- 导师匹配 / Fellowship（结构化认识"已经很出色且开放"的研究者，比冷发邮件靠谱）----
+  {
+    title: "SPAR（Supervised Program for Alignment Research）Fall 2026 · 学员申请",
+    type: "导师匹配 Mentorship",
+    tags: ["A", "B", "C"],
+    deadline: "2026-08-18",
+    deadlineLabel: "学员申请截止",
+    matchScore: 5,
+    status: "开放中，仅剩约10天",
+    link: "https://sparai.org/projects/f26/",
+    note: "强烈推荐、马上截止：兼职远程的 AI 风险研究导师匹配项目，明确设有 Security 赛道（还有 Technical/Interpretability/Governance），可以同时申请多个项目。这是'认识已经很出色且愿意带学生的研究者'最结构化、成功率最高的路径，比自己找人冷发邮件靠谱得多。3个月，9-12月，需要立刻准备申请材料。"
+  },
+  {
+    title: "MATS（ML Alignment & Theory Scholars）Winter 2027 · 学员申请",
+    type: "导师匹配 Mentorship",
+    tags: ["A", "B", "C", "D"],
+    deadline: "2026年8月中旬开放（具体日期待官网公布）",
+    deadlineLabel: "预计即将开放申请",
+    matchScore: 5,
+    status: "即将开放，需要盯紧官网",
+    link: "https://www.matsprogram.org/",
+    note: "AI alignment/安全领域最顶级的学生-导师匹配项目之一，导师来自 Anthropic、Google DeepMind、OpenAI、Redwood Research 等，含 Systems Security 赛道。Berkeley/London 线下12周+可选6-12个月延期。建议现在就去官网订阅通知，开放当天就投，竞争非常激烈，材料要提前准备好。"
+  },
+  {
+    title: "Astra Fellowship / Pivotal Research Fellowship（AI Safety）· 下一轮关注",
+    type: "导师匹配 Mentorship",
+    tags: ["A", "C", "D"],
+    deadline: "本轮（2026 Q3）已于 5/3 截止，下一轮时间待公布",
+    deadlineLabel: "已错过本轮，记录备查",
+    matchScore: 3,
+    status: "本轮已截止",
+    link: "https://constellation.org/programs/astra",
+    note: "全额资助、5个月、伯克利/伦敦线下的 AI safety fellowship，配一对一资深导师+每月$8400生活费，含 Empirical/Strategy & Governance 等方向。这轮已经错过，建议先填官网的 expression of interest 表单，下次开放能第一时间收到通知。"
+  },
+
+  // ---- 知名实验室实习 / 暑研（滚动招募，越早投越好）----
+  {
+    title: "微软亚洲研究院（MSRA）Research Intern for LLM Reasoning",
+    type: "实验室实习",
+    tags: ["C", "D"],
+    deadline: "滚动招募，无固定截止",
+    deadlineLabel: "常年开放，建议尽快投递",
+    matchScore: 5,
+    status: "开放中",
+    link: "https://www.microsoft.com/en-us/research/opportunity/research-intern-for-llm-reasoning/",
+    note: "岗位方向和你在 THU AI 学院做的 reasoning（SFT/RL/test-time scaling）几乎完全重合。需要导师同意、至少3个月实习承诺。下载官方申请表 + 中英文简历，邮件发送到岗位页面指定邮箱，标题注明'LLM Reasoning研究实习生'。属于'明日之星'实习生项目，历年有大量清北复交及海外名校学生参与。"
+  },
+  {
+    title: "北京智源研究院（BAAI）具身智能 / AI安全方向 研究实习生",
+    type: "实验室实习",
+    tags: ["C", "D"],
+    deadline: "滚动招募，无固定截止",
+    deadlineLabel: "常年开放",
+    matchScore: 4,
+    status: "开放中",
+    link: "https://mp.weixin.qq.com/s/tt2tbAcou9AMkn24IJjXow",
+    note: "具身智能岗位方向为 VLM/VLA/WBC/RL，直接匹配你在 THU 做的具身智能研究；另有 AI 安全方向研究实习生岗位在招。具身智能岗位可直接邮件投递简历到 chicheng@baai.ac.cn，注明'一作发表优先'的加分项你已经满足。"
+  },
+  {
+    title: "上海人工智能实验室（Shanghai AI Lab）日常实习 / AI训练与计算中心",
+    type: "实验室实习",
+    tags: ["C", "D"],
+    deadline: "常年滚动投递，每年3-6月为校招集中期",
+    deadlineLabel: "常年开放",
+    matchScore: 3,
+    status: "开放中",
+    link: "https://www.shlab.org.cn",
+    note: "书生大模型体系背后的团队，研究方向覆盖 LLM、具身智能、AI+Science。校招批次已过，但官网'加入我们'长期有日常实习岗位，建议主动投递简历或找内推码，不用等下一次校招季。"
+  },
+  {
+    title: "Meta FAIR PhD-track Research Scientist Intern（关注池，非当下重点）",
+    type: "实验室实习",
+    tags: ["D"],
+    deadline: "2027夏季岗位预计2026年8-10月开放申请",
+    deadlineLabel: "watch list，暂不满足条件",
+    matchScore: 2,
+    status: "关注中",
+    link: "https://ai.meta.com/join-us/residency-program/",
+    note: "目前岗位基本要求在读 PhD 或部分 Master，本科阶段暂时不是最优先级，先放进关注池。等你申请到 PhD 项目、或者以研究合作者身份进一步积累成果后，是非常值得冲的方向（FAIR 在 LLM/Alignment 方向常年招 research scientist intern）。"
+  },
+
+  // ---- 演讲 / 黑客松（低门槛刷经验+认识社区，含 fellowship 晋级通道）----
+  {
+    title: "Apart Research · AI Incident Response Sprint",
+    type: "黑客松/演讲",
+    tags: ["B", "C"],
+    deadline: "2026-09-11 至 2026-09-13",
+    deadlineLabel: "活动举办日期（线上+线下均可参加）",
+    matchScore: 4,
+    status: "开放报名",
+    link: "https://apartresearch.com/sprints/ai-incident-response-sprint-2026-09-11-to-2026-09-13",
+    note: "周末的 AI 安全黑客松，主题直接对口 AI Security（事件响应），不需要提前很久准备，无需 AI safety 背景。表现好的团队可以被邀请申请 Apart Fellowship（3-6个月，含资金+导师+发表支持），是认识 AI safety 圈子和积累项目经验的低成本高性价比方式。"
+  },
+  {
+    title: "Apart Research · Digital Minds Research Sprint",
+    type: "黑客松/演讲",
+    tags: ["B", "C"],
+    deadline: "2026-08-14 至 2026-08-16",
+    deadlineLabel: "本周末举办",
+    matchScore: 3,
+    status: "即将开始，报名从速",
+    link: "https://apartresearch.com/sprints/digital-minds-research-sprint-2026-08-14-to-2026-08-16",
+    note: "这周末就开始，主题是 AI 偏好/意识/内省能力的实证研究，和你的主方向不完全重合，但作为'低门槛试水一次 AI safety hackathon'的机会很合适，时间紧就当练手，观察 Apart Research 这个社区的运作方式，为后面参加更对口的 sprint（比如9月的 Incident Response）做准备。"
+  },
+  {
+    title: "CCF YOCSEF（青年计算机科技论坛）委员 / 报告人 长期通道",
+    type: "演讲/论坛",
+    tags: ["B", "C"],
+    deadline: "长期开放申请，无固定截止",
+    deadlineLabel: "长期发展渠道",
+    matchScore: 3,
+    status: "常年开放",
+    link: "https://www.ccf.org.cn/YOCSEF/2026-01-08/856596.shtml",
+    note: "CCF 官方的青年学者思辨/交流平台，遍布全国近30个城市分论坛，42周岁以下均可申请成为委员。不是一次性投稿，而是长期经营的国内学术人脉入口——先申请加入你所在城市的分论坛做委员，参与几次'观点论坛'活动，逐步积累到自己主讲或组织论坛的机会。"
   }
 ];
