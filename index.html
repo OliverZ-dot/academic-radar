@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学术新星机会雷达 · Tinghe Zhang</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel-2:#1d212a; --border:#2a2f3a;
+    --text:#e8eaed; --muted:#9aa3b2; --accent:#5b8def; --accent-2:#7ee0c1;
+    --danger:#ef6461; --warn:#f2b84b; --ok:#7ee0c1;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:linear-gradient(180deg,#0f1115 0%, #10131a 100%); color:var(--text);
+    line-height:1.6;
+  }
+  header{
+    max-width:1080px; margin:0 auto; padding:48px 24px 24px;
+  }
+  header h1{ font-size:28px; margin:0 0 8px; letter-spacing:.2px; }
+  header p.sub{ color:var(--muted); margin:0 0 4px; font-size:15px; }
+  header .updated{ color:var(--muted); font-size:13px; margin-top:12px; }
+  .legend{ display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+  .legend span{
+    font-size:12px; padding:4px 10px; border-radius:999px; border:1px solid var(--border);
+    color:var(--muted);
+  }
+  main{ max-width:1080px; margin:0 auto; padding:0 24px 80px; }
+  .toolbar{
+    display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px; position:sticky; top:0;
+    background:linear-gradient(180deg,#0f1115 60%, transparent); padding:12px 0; z-index:5;
+  }
+  .toolbar button{
+    background:var(--panel); color:var(--text); border:1px solid var(--border);
+    padding:8px 14px; border-radius:999px; font-size:13px; cursor:pointer; transition:.15s;
+  }
+  .toolbar button:hover{ border-color:var(--accent); }
+  .toolbar button.active{ background:var(--accent); border-color:var(--accent); color:#0b0d11; font-weight:600; }
+
+  .card{
+    background:var(--panel); border:1px solid var(--border); border-radius:var(--radius);
+    padding:20px 22px; margin-bottom:14px; transition:.15s;
+  }
+  .card:hover{ border-color:#3a4152; transform:translateY(-1px); }
+  .card-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap; }
+  .card h3{ margin:0 0 6px; font-size:17px; }
+  .card .type{ color:var(--muted); font-size:13px; }
+  .badge{
+    display:inline-block; font-size:12px; padding:5px 12px; border-radius:999px; font-weight:600;
+    white-space:nowrap;
+  }
+  .badge.urgent{ background:rgba(239,100,97,.15); color:var(--danger); border:1px solid rgba(239,100,97,.4);}
+  .badge.soon{ background:rgba(242,184,75,.15); color:var(--warn); border:1px solid rgba(242,184,75,.4);}
+  .badge.ok{ background:rgba(126,224,193,.12); color:var(--ok); border:1px solid rgba(126,224,193,.35);}
+  .badge.passed{ background:rgba(154,163,178,.12); color:var(--muted); border:1px solid var(--border);}
+  .tags{ display:flex; gap:6px; margin:10px 0 8px; flex-wrap:wrap;}
+  .tag{
+    font-size:11px; padding:2px 8px; border-radius:6px; background:var(--panel-2);
+    color:var(--muted); border:1px solid var(--border);
+  }
+  .tag.A{ color:#8fb4ff; } .tag.B{ color:#7ee0c1;} .tag.C{ color:#f2b84b;} .tag.D{ color:#e39bd6;}
+  .deadline-row{ font-size:13px; color:var(--muted); margin-bottom:8px; }
+  .note{ font-size:14px; color:#c7cbd4; background:var(--panel-2); border-left:3px solid var(--accent);
+    padding:10px 14px; border-radius:8px; margin-top:8px; }
+  .card a.link{ display:inline-block; margin-top:12px; color:var(--accent); text-decoration:none; font-size:13px; }
+  .card a.link:hover{ text-decoration:underline; }
+  .score{ font-size:13px; color:var(--muted); }
+  footer{ max-width:1080px; margin:0 auto; padding:20px 24px 60px; color:var(--muted); font-size:13px; border-top:1px solid var(--border); }
+  footer a{ color:var(--accent); }
+  .empty{ color:var(--muted); text-align:center; padding:60px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🔭 学术新星机会雷达</h1>
+  <p class="sub">为 Tinghe Zhang（东北大学 · LLM Reasoning / AI Security / Embodied AI）持续追踪的学术曝光、竞赛、Fellowship 与创业机会看板。</p>
+  <p class="updated">最后更新：<span id="updated-date"></span> · 数据来源：公开信息检索整理，仅供参考，请以官网原文为准。</p>
+  <div class="legend">
+    <span>A = 学术产出</span>
+    <span>B = 公开曝光</span>
+    <span>C = 资源网络</span>
+    <span>D = 履历里程碑</span>
+  </div>
+</header>
+
+<main>
+  <div class="toolbar" id="toolbar"></div>
+  <div id="list"></div>
+</main>
+
+<footer>
+  本页面由个人 AI 助手协助搜集整理，用于个人学术成长规划，非官方信息发布渠道。数据可能存在延迟或遗漏，重要截止日期请以各官网 / 官方公众号为准。
+</footer>
+
+<script src="data/opportunities.js"></script>
+<script>
+  document.getElementById('updated-date').textContent = LAST_UPDATED;
+
+  function daysLeft(deadlineStr){
+    // 只取第一个可解析的 yyyy-mm-dd 片段用于倒计时估算
+    const m = deadlineStr.match(/\d{4}-\d{2}-\d{2}/);
+    if(!m) return null;
+    const d = new Date(m[0] + "T23:59:59");
+    const now = new Date();
+    return Math.ceil((d - now) / (1000*60*60*24));
+  }
+
+  function statusBadge(item){
+    const dl = daysLeft(item.deadline);
+    if(item.status.includes('已截止') || item.status.includes('已错过')){
+      return {cls:'passed', label:'已过 · 记录备查'};
+    }
+    if(dl === null){
+      return {cls:'ok', label:item.status};
+    }
+    if(dl < 0) return {cls:'passed', label:'已截止'};
+    if(dl <= 10) return {cls:'urgent', label:`⚠️ 仅剩 ${dl} 天`};
+    if(dl <= 30) return {cls:'soon', label:`剩 ${dl} 天`};
+    return {cls:'ok', label:`剩 ${dl} 天`};
+  }
+
+  function render(filterTag){
+    const list = document.getElementById('list');
+    list.innerHTML = '';
+    let items = OPPORTUNITIES.slice();
+    if(filterTag && filterTag !== 'all'){
+      items = items.filter(i => i.tags.includes(filterTag));
+    }
+    // 按紧迫程度排序：有明确倒计时的排前面，且天数少的优先
+    items.sort((a,b) => {
+      const da = daysLeft(a.deadline); const db = daysLeft(b.deadline);
+      const aa = (da === null || da < 0) ? 9999 : da;
+      const bb = (db === null || db < 0) ? 9999 : db;
+      return aa - bb;
+    });
+
+    if(items.length === 0){
+      list.innerHTML = '<div class="empty">这个分类下暂时没有机会，切换其他标签看看。</div>';
+      return;
+    }
+
+    for(const item of items){
+      const badge = statusBadge(item);
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <div class="card-top">
+          <div>
+            <h3>${item.title}</h3>
+            <div class="type">${item.type} · ${'★'.repeat(item.matchScore)}${'☆'.repeat(5-item.matchScore)} <span class="score">匹配度</span></div>
+          </div>
+          <span class="badge ${badge.cls}">${badge.label}</span>
+        </div>
+        <div class="tags">${item.tags.map(t => `<span class="tag ${t}">${t}</span>`).join('')}</div>
+        <div class="deadline-row">📅 ${item.deadlineLabel}：${item.deadline}</div>
+        <div class="note">💡 ${item.note}</div>
+        <a class="link" href="${item.link}" target="_blank" rel="noopener">查看官方信息 →</a>
+      `;
+      list.appendChild(card);
+    }
+  }
+
+  const tagLabels = {all:'全部', A:'A · 学术产出', B:'B · 公开曝光', C:'C · 资源网络', D:'D · 履历里程碑'};
+  const toolbar = document.getElementById('toolbar');
+  Object.keys(tagLabels).forEach((key, idx) => {
+    const btn = document.createElement('button');
+    btn.textContent = tagLabels[key];
+    if(idx === 0) btn.classList.add('active');
+    btn.onclick = () => {
+      document.querySelectorAll('.toolbar button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      render(key);
+    };
+    toolbar.appendChild(btn);
+  });
+
+  render('all');
+</script>
+
+</body>
+</html>
