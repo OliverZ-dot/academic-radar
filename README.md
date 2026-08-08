@@ -8,9 +8,17 @@
 ## 如何更新数据
 
 在 Cursor 中打开这个仓库，让助手："搜索最新的机会并更新 opportunities.js"，助手会：
-1. 搜索与 LLM reasoning / AI Security / Embodied AI / CV 相关的新会议 workshop、竞赛、fellowship、创业赛事、演讲论坛机会；
+1. 按下面**固定的 6 类检索范围**（每次都要覆盖，不能只挑一两类）搜索与 LLM reasoning / AI Security / Embodied AI / CV 相关的新机会：
+   - 学术会议 & workshop（论文/talk/travel grant）
+   - Fellowship / 奖学金 / 科研奖项
+   - 竞赛 & 创业赛道
+   - 演讲 / 论坛 / 曝光渠道（含黑客松、开放麦）
+   - 导师匹配 / Fellowship 项目（如 SPAR、MATS 这类结构化导师匹配）
+   - 知名实验室 / 机构暑研与实习（不限于大厂）
 2. 按 A/B/C/D 标签分类、评估匹配度、写出具体行动建议；
 3. 更新 `data/opportunities.js` 并提交推送，使网页自动刷新。
+
+详细覆盖范围说明见 `00_助手角色定位与工作计划.md` 第 4 节。
 
 ## 自动化（可选）
 
