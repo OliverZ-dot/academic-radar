@@ -1,7 +1,20 @@
 // 已过期超过 7 天（或为主列表腾位）的机会归档。主列表保持精简，此处仅供回溯查阅。
-const ARCHIVE_UPDATED = "2026-11-11";
+const ARCHIVE_UPDATED = "2026-11-12";
 
 const ARCHIVED_OPPORTUNITIES = [
+  {
+    title: "G-Research · NeurIPS 2026 Sydney Travel Grant",
+    type: "Travel Grant",
+    tags: ["B", "C", "D"],
+    deadline: "2026-11-06",
+    deadlineLabel: "申请已于 Friday 6 Nov 截止；通知约 11/13；面向 emerging talent / early-career / students 的全额悉尼 travel grant",
+    matchScore: 4,
+    status: "已截止",
+    link: "https://www.gresearch.com/g-research-at-neurips/",
+    note: "申请窗已关。若已提交：盯约 11/13 通知并备好护照/签证材料；未提交则改盯 AAAI-27 Student Scholar/Volunteer（11/30–12/4 ET 开放）与后续 conference travel 渠道。",
+    archivedAt: "2026-11-12",
+    archiveReason: "申请截止已过（第6天）；主列表腾位给 ICML 2027（官网摘要 1/14、正文 1/22 AoE）"
+  },
   {
     title: "CCF 第二届珠峰大会 · 智能体安全论坛（兼具身智能产教融合论坛）",
     type: "演讲/论坛",
