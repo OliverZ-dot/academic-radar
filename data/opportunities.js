@@ -1,156 +1,244 @@
-// 机会数据源。人工维护版本 v2（2026-08-08 由助手调研整理，新增导师匹配/实验室实习/演讲黑客松三大类）。
-// 后续由每日/每周自动化任务追加更新，或由你要求助手手动刷新。
-const LAST_UPDATED = "2026-08-08";
-
+// 机会数据源。每日自动化更新于 2026-11-12：基于 11/11 分支；OR/HotCRP/官网复核；AISC 队员窗明天开；Epistemics 明天开赛；G-Research TG 归档腾位；新增 ICML 2027（官网摘要 1/14、正文 1/22 AoE）；主列表 25 条。
 // tags: A=学术产出 B=公开曝光 C=资源网络 D=履历里程碑
+const LAST_UPDATED = "2026-11-12";
+
 const OPPORTUNITIES = [
+  // ---- 今日最紧迫 ----
   {
-    title: "NeurIPS 2026 Workshop · AI4GOOD（含 Multi-agent Security and Safety 分赛道）",
-    type: "会议 Workshop",
-    tags: ["A", "B", "C"],
-    deadline: "2026-08-29",
-    deadlineLabel: "论文投稿截止",
-    matchScore: 5,
-    status: "开放中",
-    link: "https://trustworthy-ai-for-good.github.io/",
-    note: "强烈推荐：明确设有 Multi-agent Security 赛道，和 TOPOSHIELD 方向高度契合，可将现有工作扩展/衍生一篇 workshop 论文，本科生也容易中，且能借此认识 AI Safety 圈子的人。"
-  },
-  {
-    title: "NeurIPS 2026 Workshop · Child Safety in AI",
-    type: "会议 Workshop",
-    tags: ["A", "B"],
-    deadline: "2026-08-29",
-    deadlineLabel: "论文投稿截止（AoE）",
-    matchScore: 3,
-    status: "开放中",
-    link: "https://childsafety-ai.github.io/",
-    note: "如果安全方向的工作能扩展出儿童保护/内容安全角度可以投；否则优先级低于 AI4GOOD。"
-  },
-  {
-    title: "REALM @ EMNLP 2026（LLM Agents workshop，含 Security/Safety/Robustness 主题）",
-    type: "会议 Workshop",
-    tags: ["A", "B", "C"],
-    deadline: "2026-08-31",
-    deadlineLabel: "ARR Commitment 截止（直接投稿已截止，可走 ARR 转投）",
+    title: "Apart Research · AI × Epistemics Research Sprint",
+    type: "黑客松/演讲",
+    tags: ["B", "C"],
+    deadline: "2026-11-13 至 2026-11-15",
+    deadlineLabel: "活动举办日期（线上 + Saarbrücken hub；提交截止 11/15 AoE；明天开赛）",
     matchScore: 4,
-    status: "开放中（仅 ARR 转投通道）",
-    link: "https://realm-workshop.github.io/call_for_papers/",
-    note: "直接投稿窗口已过，但若手上有已走 ARR 流程的 agent/reasoning 相关论文，可在 8/31 前 commit 过去，10 月底在布达佩斯举办，晚投稿是拿口头报告曝光的低成本机会。"
+    status: "开放报名（明天开赛）",
+    link: "https://apartresearch.com/sprints/ai-x-epistemics-research-sprint-2026-11-13-to-2026-11-15",
+    note: "模型置信/可验证性/信任基础设施，贴合 LLM reasoning×安全。今天报名并准备 1 页 claim-verification 基准提纲，明天 Kickoff 进 Discord 组队；Saarbrücken hub 见 luma.com/o9ra0uoq。"
   },
   {
-    title: "ICLR 2027",
+    title: "AI Safety Camp · Virtual 2027（第12届 · 队员申请）",
+    type: "导师匹配 Mentorship",
+    tags: ["A", "B", "C"],
+    deadline: "2026-11-29",
+    deadlineLabel: "队员申请明天 11/13 开放–11/29 截止；项目榜 11/13 上线；队长选人至 12/20；项目期 2027-01-11 至 04-18（线上，≥10h/周）",
+    matchScore: 5,
+    status: "明天开放申请",
+    link: "https://www.aisafety.camp/",
+    note: "3 个月远程组队做预选 AI safety 项目。设日历盯明天 11/13 项目榜；优先勾 agent security / multi-agent / eval 项目，按 ≥10h/周 写一页动机+可复用代码/论文证据，开窗当天投出。"
+  },
+  {
+    title: "Lexsi · AI Safety and Alignment Hackathon（× Cohere Labs / Hugging Face）",
+    type: "黑客松/演讲",
+    tags: ["B", "C", "D"],
+    deadline: "2026-11-15",
+    deadlineLabel: "报名 11/8 已关；线上黑客松进行中（11/1–22）；提交 11/15 23:59 AoE；短名单 11/16；决赛材料至 11/22；含 Red Teaming / Agentic Fine-tuning 赛道",
+    matchScore: 5,
+    status: "进行中（报名已关；盯提交·约3天）",
+    link: "https://hackathon.lexsi.ai/",
+    note: "若已报名：本周锁定 Red Teaming 或 Agentic Fine-tuning，把 before/after 指标与公开 HF collection 准备好，赶 11/15 AoE 提交；未报名则改打 Epistemics 11/13–15 与 Threat Intel 12/4–6。"
+  },
+  {
+    title: "BlueDot Impact · Frontier AI Governance Course（下一期 cohort）",
+    type: "演讲/论坛",
+    tags: ["B", "C"],
+    deadline: "2026-11-15",
+    deadlineLabel: "官网 soonestDeadline=15 Nov；下一期 intensive 约 11/23–28、part-time 约 11/23–1/3；免费约 40 小时；申请见课程页 Apply",
+    matchScore: 4,
+    status: "开放中（约3天）",
+    link: "https://bluedot.org/courses/ai-governance",
+    note: "免费前沿 AI 治理课（证据评估/机构地图/策略辩论），适合作 GovAI/Pathfinder 前置训练。今天在 bluedot.org/courses/ai-governance 选 intensive 或 part-time 提交申请；技术向另见主列表 Technical AI Safety。"
+  },
+  {
+    title: "Algoverse · AI Safety Fellowship Spring 2027",
+    type: "导师匹配 Mentorship",
+    tags: ["A", "C", "D"],
+    deadline: "2026-11-15",
+    deadlineLabel: "Spring 2027 申请截止 Sunday Nov 15 23:59 PT（≈11/16 07:59 UTC）；免费（Open Phil 资助）；含 Trial Week + 组队发论文",
+    matchScore: 5,
+    status: "开放中（约3天）",
+    link: "https://algoverseairesearch.org/ai-safety-fellowship",
+    note: "面向大学生/从业者做可发表 AI safety 研究（忽略页上残留的 Applications Closed for 2026 文案）。今天开写申请+准备 coding challenge 素材，赶 11/15 PT；材料可与 SPAR/PRISM EOI 复用。"
+  },
+  {
+    title: "Humanoids 2026 Workshop · Trustworthy Humanoid Systems（From Capability to Assurance）",
+    type: "会议 Workshop",
+    tags: ["A", "B", "C"],
+    deadline: "2026-11-15",
+    deadlineLabel: "官网 Paper & Demo Nov 15 23:59 AoE；OpenReview due ≈11/17 11:59 UTC（alias Trustworthy_Humanoid_Systems；11/12 复核仍开放；滚动审 11/2–11/20）；会期 12/7 圣克拉拉",
+    matchScore: 5,
+    status: "开放中（约3天）",
+    link: "https://humanoid-safety-assurance.paiagent.ai/humanoids2026/",
+    note: "具身/人形机器人系统级安全与 assurance（规划控制×运行时监督×人机接触），贴合 Embodied AI×AI Security。本周把 runtime monitor / failure recovery / 安全评测短文按 IEEE 双栏投 openreview.net/group?id=IEEE.org/RAS/Humanoids/2026/Workshop/Trustworthy_Humanoid_Systems（非归档、单盲）；有 demo 可同步交，标题含 Demo。"
+  },
+  {
+    title: "CVPR 2027",
     type: "顶会",
     tags: ["A", "D"],
-    deadline: "2026-09-18 / 2026-09-25",
-    deadlineLabel: "摘要截止 9/18，正文截止 9/25（AOE）",
-    matchScore: 5,
-    status: "开放中（尚未开放提交系统，需关注 OpenReview）",
-    link: "https://iclr.cc/Conferences/2027/CallForPapers",
-    note: "距今约6周，是你 reasoning/推理方向手头在投稿工作的下一个自然节点，建议现在就规划哪篇工作冲这个 deadline。"
+    deadline: "2026-11-16",
+    deadlineLabel: "Paper Registration 11/10 AoE 已过；正文 11/16 AoE（补充材料 11/23）；Workshop 提案 11/4 已过",
+    matchScore: 4,
+    status: "开放中（正文约4天；注册已截止）",
+    link: "https://cvpr.thecvf.com/Conferences/2027/Dates",
+    note: "若已完成 Paper Registration：本周锁稿投 openreview.net/group?id=thecvf.com/CVPR/2027/Conference（11/16 AoE）；未注册则本轮主会已无提交资格，改盯 AAAI-27 workshop（11/20）与 ICLR 2027 workshop CFP（约 11/29 通知后）。"
   },
   {
-    title: "中国国际大学生创新大赛（原'互联网+'）2026",
-    type: "创业赛道",
-    tags: ["B", "C", "D"],
-    deadline: "2026-08-10 起报名，2026-09-25 12:00 截止",
-    deadlineLabel: "报名截止",
-    matchScore: 4,
-    status: "报名系统即将开放",
-    link: "https://cy.ncss.cn",
-    note: "你已有'挑战杯'全国唯一冠军的经验和 Symbiotic AI 概念，可以考虑把某个研究/开源项目包装成创业项目参赛，复用已有的路演/答辩经验，是曝光+履历的高性价比选择。"
+    title: "AAAI-27 Workshop · Embodied AI Meta-alignment（When / How / With Whom to Align）",
+    type: "会议 Workshop",
+    tags: ["A", "B", "C"],
+    deadline: "2026-11-16",
+    deadlineLabel: "官网 Nov 16 23:59 AoE；HotCRP Deadline ≈11/17 11:59 UTC（11/12 复核 submissions open）；通知 12/2；会期 2027-02-22/23 蒙特利尔",
+    matchScore: 5,
+    status: "开放中（约4天）",
+    link: "https://embodied-meta-alignment.pages.dev/",
+    note: "具身智能×对齐元问题（安全/规范/多方目标权衡），直打 Embodied AI×AI Security。本周把具身安全/偏好冲突短文（position 2–4 页或 full 6–8 页，双盲 AAAI 格式）投 https://embodied-meta-alignment-2026.hotcrp.com/。"
   },
   {
     title: "'挑战杯'第二十届全国大学生课外学术科技作品竞赛（2027 届）",
     type: "竞赛",
     tags: ["A", "D"],
     deadline: "2026 年内校级选拔陆续启动（各校不同，通常 11 月前后），国赛在 2027 年",
-    deadlineLabel: "校内选拔即将开始，需主动联系学院确认本校时间表",
+    deadlineLabel: "多校校级选拔持续推进（华南理工 11/19 前提交学院摸排；常州大学等院赛材料约 11/15；上海大学等已发校选通知），需主动联系学院确认本校时间表",
     matchScore: 5,
     status: "校级选拔阶段（因校而异）",
     link: "https://www.tiaozhanbei.net/timing",
-    note: "你是上一届（2025）全国唯一冠军，非常适合连任/带队参赛或作为经验分享者角色参与选拔宣讲。建议本周主动询问学院团委本校第二十届的校内选拔时间表，别错过校内报名窗口。"
+    note: "你是上一届全国唯一冠军：今天立刻问学院团委第二十届校内选拔截止日与申报书模板，决定是带队冲奖还是做经验分享/答辩辅导角色。"
   },
   {
-    title: "QRT Travel Grant to NeurIPS 2026",
-    type: "Travel Grant",
-    tags: ["C", "D"],
-    deadline: "2026-10-02",
-    deadlineLabel: "申请截止",
-    matchScore: 3,
-    status: "开放中",
-    link: "https://builtinlondon.uk/job/qrt-travel-grant-neurips-2026-apply-here/10277793",
-    note: "面向硕士/博士/博后，本科生能否申请需要邮件确认，即使不行也可以留意其他 NeurIPS 2026 的本科生资助渠道。若有论文/workshop 论文被接收，优先申请。"
+    title: "AAAI-27 Workshop · LoyalAgents（Who Does Your AI Agent Work For?）",
+    type: "会议 Workshop",
+    tags: ["A", "B", "C"],
+    deadline: "2026-11-20",
+    deadlineLabel: "官网 Nov 20 AoE；OpenReview due ≈11/21 11:59 UTC（alias LoyalAgents；11/12 复核仍开放）；通知 12/2；camera-ready 1/15；会期 2027-02-22/23 蒙特利尔",
+    matchScore: 5,
+    status: "开放中（约8天）",
+    link: "https://loyalagents.github.io/aaai27/",
+    note: "agent 对用户的忠诚/权限门控/委托身份/利益冲突，补上「对公众安全 ≠ 对用户忠诚」缺口，贴合 TOPOSHIELD。≤8 页 AAAI、单盲、非归档，投 openreview.net/group?id=AAAI.org/2027/Workshop/LoyalAgents；可把攻防短文改写成 permission gate / attribution / inducement 评测。"
   },
   {
-    title: "华为'全球顶尖 AI 人才招募计划' / '天才少年'挑战课题",
-    type: "人才计划",
-    tags: ["C", "D"],
-    deadline: "滚动招募，无固定截止",
-    deadlineLabel: "常年开放（面向2026/2027届毕业生）",
+    title: "AAAI-27 Workshop · LAUT（LLM Agents Under Threat in Cyberspace）",
+    type: "会议 Workshop",
+    tags: ["A", "B", "C"],
+    deadline: "2026-11-20",
+    deadlineLabel: "官网 Nov 20 AoE；OpenReview due ≈11/21 11:59 UTC（alias LAUT；11/12 复核仍开放）；通知 12/2；会期 2027-02-22/23 蒙特利尔",
+    matchScore: 5,
+    status: "开放中（约8天）",
+    link: "https://llm-agents-under-threat.github.io/",
+    note: "直打 prompt injection / tool misuse / multi-agent collusion / 安全 agent 架构，与 TOPOSHIELD 高度重合。本周把 agent 攻防短文（≤7页、单盲、非归档）投 openreview.net/group?id=AAAI.org/2027/Workshop/LAUT。"
+  },
+  {
+    title: "AAAI-27 Workshop · Trust4RSI-Agent（Trustworthy Evolution of AI Agents）",
+    type: "会议 Workshop",
+    tags: ["A", "B", "C"],
+    deadline: "2026-11-20",
+    deadlineLabel: "官网 Nov 20 AoE；OpenReview due ≈11/21 13:00 UTC（11/12 复核仍开放）；通知 12/2；会期 2027-02-22/23 蒙特利尔",
+    matchScore: 5,
+    status: "开放中（约8天）",
+    link: "https://trust4rsi-agent.github.io/AAAI2027/",
+    note: "把 agent 演化可信性当 OS/系统问题（记忆溯源、工具沙箱、策略回滚、多智能体共演化）。优先投 LAUT/LoyalAgents 后，列可扩短文投 openreview.net/group?id=AAAI.org/2027/Workshop/Trust4RSI-Agent。"
+  },
+  {
+    title: "AAAI-27 Workshop · AICS（AI Cyber Security）",
+    type: "会议 Workshop",
+    tags: ["A", "B", "C"],
+    deadline: "2026-11-20",
+    deadlineLabel: "官网 Nov 20 AoE；OpenReview due ≈11/21 10:59 UTC（11/12 复核仍开放）；通知 12/11；AAAI 拒稿 fast track 另约 12/2 AoE；会期 2027-02 蒙特利尔",
+    matchScore: 5,
+    status: "开放中（约8天）",
+    link: "http://aics.site/AICS2027/cfp.html",
+    note: "主题直打 AI 系统安全/对抗鲁棒/红队/多智能体博弈安全，非匿名投稿。把 agent/jailbreak/红队短文投 openreview.net/group?id=AAAI.org/2027/Workshop/AICS；未赶上可盯 12/2 AAAI 拒稿 fast track。"
+  },
+  {
+    title: "BlueDot Impact · Technical AI Safety Course（下一期 cohort）",
+    type: "演讲/论坛",
+    tags: ["A", "B", "C"],
+    deadline: "2026-11-22",
+    deadlineLabel: "官网 soonestDeadline=22 Nov；下一期 intensive 约 11/30–12/5（申请至 11/22）、part-time 约 12/7–1/17（申请至 11/29）；免费；需具备 LLM 训练/微调基础",
+    matchScore: 5,
+    status: "开放中（约10天）",
+    link: "https://bluedot.org/courses/technical-ai-safety",
+    note: "比 Governance 更贴技术对齐/评测/AI control。今天在 bluedot.org/courses/technical-ai-safety 选 11/22 前的 intensive；若时间紧可改申 11/29 part-time，并与 Algoverse/GovAI 文书错峰。"
+  },
+  {
+    title: "GovAI · Summer Fellowship 2027（UK Research/Applied + DC）",
+    type: "Fellowship",
+    tags: ["B", "C", "D"],
+    deadline: "2026-11-22",
+    deadlineLabel: "UK Research/Applied：11/22 23:59 GMT；DC Summer：11/22 23:59 EST；项目期 2027-06-07 至 08-27（伦敦或华盛顿）",
     matchScore: 4,
-    status: "开放中",
-    link: "https://www.huaweicloud.com/",
-    note: "'天才少年挑战课题'目前公开方向包含大模型安全技术、世界模型理论，和你的 AI Security / Symbiotic AI 方向高度重合。不急于现在投递（2027 届毕业更合适），但建议现在开始关注、了解历届课题方向，为后年投递做准备；也可以先争取暑期实习管道。"
+    status: "开放中（约10天）",
+    link: "https://www.governance.ai/opportunities",
+    note: "AI governance 三个月全职 fellowship（UK 可签临时工签；DC 需美国工作许可）。技术向优先填 Research Track；材料本周起草，与 Algoverse/Pathfinder/BlueDot 错峰提交，截止前在 governance.ai/opportunities 投递。"
   },
   {
-    title: "WAIC 世界人工智能大会·青年优秀论文奖（WAICYOP）2027 届（预告）",
-    type: "论坛/奖项",
-    tags: ["B", "C"],
-    deadline: "预计 2027 年 4 月前后（2026 届已于 4/26 截止）",
-    deadlineLabel: "本届已错过，下一届待官方通知",
-    matchScore: 3,
-    status: "本轮已截止，记录备查",
-    link: "https://kexie.dhu.edu.cn/2026/0305/c16079a372052/page.htm",
-    note: "错过了 2026 届，设一个日历提醒在 2027 年 3 月前后主动查一次官网，用你 2026 年发表/在投的论文去申报。"
+    title: "Pathfinder Fellowship · Spring 2027（Kairos · 校园 AI Safety/Policy 社团负责人）",
+    type: "导师匹配 Mentorship",
+    tags: ["B", "C", "D"],
+    deadline: "2026-11-24",
+    deadlineLabel: "申请窗 11/10–11/24 23:59 AoE；录取 12/2；Kickoff mentee 12/6",
+    matchScore: 4,
+    status: "开放中（约12天）",
+    link: "https://pathfinder.kairos-project.org/",
+    note: "面向带领/筹建高校 AI safety·policy 社团的学生（本科可申，无个人津贴但可拿社团经费）。今天打开官网申请页，按社团现状/学期计划/个人角色写一稿并先提交，11/24 前可迭代。"
   },
   {
-    title: "WAIC 青年菁英交流会 / 机器之心'先锋青年说'等青年学者论坛",
-    type: "论坛/演讲",
+    title: "Apart Research · Threat Intelligence & Threat Modelling Hackathon（× SL5）",
+    type: "黑客松/演讲",
     tags: ["B", "C"],
-    deadline: "无固定截止，通常每年 6-7 月随 WAIC 前后发布征集通知",
-    deadlineLabel: "持续关注，非即时行动项",
-    matchScore: 3,
-    status: "常态化关注",
-    link: "https://www.qbitai.com/",
-    note: "建议关注量子位、机器之心、智源社区的公众号，这类论坛通常靠自荐投稿研究成果+社群人脉获得邀请，不是标准报名流程，适合作为长期'刷脸'渠道。"
+    deadline: "2026-12-04 至 2026-12-06",
+    deadlineLabel: "活动举办日期（线上；提交截止 12/6 AoE；与 Security Level 5 合办）",
+    matchScore: 5,
+    status: "开放报名",
+    link: "https://apartresearch.com/sprints/threat-intelligence-threat-modelling-2026",
+    note: "用 LLM 规模化威胁情报/威胁建模，服务前沿 AI 数据中心对抗国家级攻击——直接贴 AI Security。今天报名；先打 Epistemics，再预留 12/4–6（在 Attribution 之前），起草 1 页 AI-assisted threat model 提纲。"
+  },
+  {
+    title: "Apart Research · Agent Attribution Hackathon",
+    type: "黑客松/演讲",
+    tags: ["B", "C"],
+    deadline: "2026-12-11 至 2026-12-13",
+    deadlineLabel: "官网已改期：12/11–13 线上（提交截止 12/13 AoE；原 11/27–29 不再适用；另有 Tel Aviv jam site）",
+    matchScore: 5,
+    status: "开放报名（改期·约29天）",
+    link: "https://apartresearch.com/sprints/agent-attribution-2026",
+    note: "区分 rogue agent vs 人控 agent 的归因/检测/逃逸，直打 agent security。今天报名；日程 Epistemics→Threat Intel（12/4）→Attribution（12/11），预写 1 页 attribution classifier 提纲。"
+  },
+  {
+    title: "ICML 2027",
+    type: "顶会",
+    tags: ["A", "D"],
+    deadline: "2027-01-14 / 2027-01-22",
+    deadlineLabel: "提交系统 1/8 开放；摘要 1/14 AoE；正文 1/22 AoE；一阶段拒稿 2/23；最终通知 5/3；会期 2027-08-02–04（Workshop 8/5–6）",
+    matchScore: 5,
+    status: "开放中（距摘要约63天；官网已公布 Dates）",
+    link: "https://icml.cc/Conferences/2027/Dates",
+    note: "11/12 新增：官网已锁定摘要/正文节点。把 reasoning/安全方向下一篇主会目标对准 ICML；本周列可投稿工作清单，并在 1/8 前提前建好 OpenReview 账号（Suggested Account Creation 同日）。"
   },
 
-  // ---- 导师匹配 / Fellowship（结构化认识"已经很出色且开放"的研究者，比冷发邮件靠谱）----
+  // ---- 导师匹配关注 ----
   {
-    title: "SPAR（Supervised Program for Alignment Research）Fall 2026 · 学员申请",
+    title: "SPAR（Supervised Program for Alignment Research）Spring 2027 · 学员关注",
     type: "导师匹配 Mentorship",
     tags: ["A", "B", "C"],
-    deadline: "2026-08-18",
-    deadlineLabel: "学员申请截止",
+    deadline: "预计 2026-12 前后开放申请（官网：Spring apps open around December）",
+    deadlineLabel: "下一轮约 12 月开放；EOI 表单可先填；并行可填 PRISM Fellow EOI（Fellow 窗 12/14–1/8；Mentor 窗至 11/25）",
     matchScore: 5,
-    status: "开放中，仅剩约10天",
-    link: "https://sparai.org/projects/f26/",
-    note: "强烈推荐、马上截止：兼职远程的 AI 风险研究导师匹配项目，明确设有 Security 赛道（还有 Technical/Interpretability/Governance），可以同时申请多个项目。这是'认识已经很出色且愿意带学生的研究者'最结构化、成功率最高的路径，比自己找人冷发邮件靠谱得多。3个月，9-12月，需要立刻准备申请材料。"
-  },
-  {
-    title: "MATS（ML Alignment & Theory Scholars）Winter 2027 · 学员申请",
-    type: "导师匹配 Mentorship",
-    tags: ["A", "B", "C", "D"],
-    deadline: "2026年8月中旬开放（具体日期待官网公布）",
-    deadlineLabel: "预计即将开放申请",
-    matchScore: 5,
-    status: "即将开放，需要盯紧官网",
-    link: "https://www.matsprogram.org/",
-    note: "AI alignment/安全领域最顶级的学生-导师匹配项目之一，导师来自 Anthropic、Google DeepMind、OpenAI、Redwood Research 等，含 Systems Security 赛道。Berkeley/London 线下12周+可选6-12个月延期。建议现在就去官网订阅通知，开放当天就投，竞争非常激烈，材料要提前准备好。"
-  },
-  {
-    title: "Astra Fellowship / Pivotal Research Fellowship（AI Safety）· 下一轮关注",
-    type: "导师匹配 Mentorship",
-    tags: ["A", "C", "D"],
-    deadline: "本轮（2026 Q3）已于 5/3 截止，下一轮时间待公布",
-    deadlineLabel: "已错过本轮，记录备查",
-    matchScore: 3,
-    status: "本轮已截止",
-    link: "https://constellation.org/programs/astra",
-    note: "全额资助、5个月、伯克利/伦敦线下的 AI safety fellowship，配一对一资深导师+每月$8400生活费，含 Empirical/Strategy & Governance 等方向。这轮已经错过，建议先填官网的 expression of interest 表单，下次开放能第一时间收到通知。"
+    status: "关注中（Fall 已关；Spring 约12月）",
+    link: "https://sparai.org/",
+    note: "11/12 复核：Fall 已关、Spring 约 12 月开放。立刻点 Express interest；同步 prism-research.org 填 Fellow EOI。校园社团负责人另见主列表 Pathfinder；AISC 队员窗明天开。"
   },
 
-  // ---- 知名实验室实习 / 暑研（滚动招募，越早投越好）----
+  // ---- 实验室实习 ----
+  {
+    title: "微软亚洲研究院（MSRA）Research Intern in AI Safety（Societal AI Group）",
+    type: "实验室实习",
+    tags: ["C", "D"],
+    deadline: "滚动招募，无固定截止",
+    deadlineLabel: "2026-10-20 新帖；北京；本科可申；需导师书面同意 + ≥3 个月",
+    matchScore: 5,
+    status: "开放中",
+    link: "https://www.microsoft.com/en-us/research/opportunity/research-intern-in-ai-safety-societal-ai-group/",
+    note: "AI 能力评测/价值对齐/自主系统安全可控，直打 AI Security。下载 https://aka.ms/InternApplication，中英文简历发 jingyao@microsoft.com，标题写「Social Computing组研究实习生」，注明可实习 ≥3 个月。"
+  },
   {
     title: "微软亚洲研究院（MSRA）Research Intern for LLM Reasoning",
     type: "实验室实习",
@@ -160,74 +248,39 @@ const OPPORTUNITIES = [
     matchScore: 5,
     status: "开放中",
     link: "https://www.microsoft.com/en-us/research/opportunity/research-intern-for-llm-reasoning/",
-    note: "岗位方向和你在 THU AI 学院做的 reasoning（SFT/RL/test-time scaling）几乎完全重合。需要导师同意、至少3个月实习承诺。下载官方申请表 + 中英文简历，邮件发送到岗位页面指定邮箱，标题注明'LLM Reasoning研究实习生'。属于'明日之星'实习生项目，历年有大量清北复交及海外名校学生参与。"
+    note: "下载 https://aka.ms/InternApplication，中英文简历发 MSRAih@microsoft.com 与 shun.zheng@microsoft.com，标题写「LLM Reasoning研究实习生」，注明可实习 ≥3 个月。"
   },
   {
-    title: "北京智源研究院（BAAI）具身智能 / AI安全方向 研究实习生",
+    title: "微软亚洲研究院（MSRA）具身智能研究实习生（Embodied AI / VLA / World Model）",
     type: "实验室实习",
     tags: ["C", "D"],
     deadline: "滚动招募，无固定截止",
-    deadlineLabel: "常年开放",
-    matchScore: 4,
+    deadlineLabel: "常年开放，本科也可申请",
+    matchScore: 5,
     status: "开放中",
-    link: "https://mp.weixin.qq.com/s/tt2tbAcou9AMkn24IJjXow",
-    note: "具身智能岗位方向为 VLM/VLA/WBC/RL，直接匹配你在 THU 做的具身智能研究；另有 AI 安全方向研究实习生岗位在招。具身智能岗位可直接邮件投递简历到 chicheng@baai.ac.cn，注明'一作发表优先'的加分项你已经满足。"
+    link: "https://www.microsoft.com/en-us/research/opportunity/research-intern-for-machine-learning-group-embodied-ai-research/",
+    note: "明确欢迎有志科研的本科生；方向含 latent action / VLA / world model / RL。同一套申请表发 MSRAih@microsoft.com 与 lizo@microsoft.com，标题写「机器学习组—具身智能研究实习生」。"
   },
   {
-    title: "上海人工智能实验室（Shanghai AI Lab）日常实习 / AI训练与计算中心",
+    title: "上海人工智能实验室 · Agent算法 / 大模型&智能体安全 研究实习",
     type: "实验室实习",
     tags: ["C", "D"],
-    deadline: "常年滚动投递，每年3-6月为校招集中期",
-    deadlineLabel: "常年开放",
-    matchScore: 3,
+    deadline: "滚动招募（Agent 岗 + 攻防平台中心安全岗均开放）",
+    deadlineLabel: "常年开放；要求本科高年级+一作或主要贡献者论文优先；安全岗每周≥3天、≥3个月",
+    matchScore: 5,
     status: "开放中",
-    link: "https://www.shlab.org.cn",
-    note: "书生大模型体系背后的团队，研究方向覆盖 LLM、具身智能、AI+Science。校招批次已过，但官网'加入我们'长期有日常实习岗位，建议主动投递简历或找内推码，不用等下一次校招季。"
+    link: "https://www.shlab.org.cn/joinus/detail/7677804403931728179",
+    note: "安全岗直打 Agent Safety/Jailbreak/红队（https://www.shlab.org.cn/joinus/detail/7677804403931728179）；Agent 算法岗见 https://www.shlab.org.cn/joinus/detail/7674925567683250474。今天按匹配度优先投安全岗，邮件 comm@pjlab.org.cn，简历突出 AI Security/Agent 一作与可实习时长。"
   },
   {
-    title: "Meta FAIR PhD-track Research Scientist Intern（关注池，非当下重点）",
+    title: "字节跳动 Seed 大模型人才校招 / 研究实习（含安全对齐 · 具身 · Reasoning · Multi-Agent）",
     type: "实验室实习",
-    tags: ["D"],
-    deadline: "2027夏季岗位预计2026年8-10月开放申请",
-    deadlineLabel: "watch list，暂不满足条件",
-    matchScore: 2,
-    status: "关注中",
-    link: "https://ai.meta.com/join-us/residency-program/",
-    note: "目前岗位基本要求在读 PhD 或部分 Master，本科阶段暂时不是最优先级，先放进关注池。等你申请到 PhD 项目、或者以研究合作者身份进一步积累成果后，是非常值得冲的方向（FAIR 在 LLM/Alignment 方向常年招 research scientist intern）。"
+    tags: ["C", "D"],
+    deadline: "滚动招募（2027 届校招 + 实习通道已开）",
+    deadlineLabel: "应届生面向 2026.9–2027.8 毕业；实习面向 2027.9 及以后毕业在读；另有「大模型安全与对齐研究实习生」对口岗",
+    matchScore: 5,
+    status: "开放中",
+    link: "https://seed.bytedance.com/zh/seedearlycareer",
+    note: "官网含基础大模型/RL/reasoning/multi-agent/具身；另有安全与对齐实习（Agent 可控/红队/监控）。本周按毕业年份选通道投递，优先搜投「大模型安全与对齐」岗，邮件 seedcampus@bytedance.com 备询；简历突出 reasoning/安全/VLA 一作与挑战杯。"
   },
-
-  // ---- 演讲 / 黑客松（低门槛刷经验+认识社区，含 fellowship 晋级通道）----
-  {
-    title: "Apart Research · AI Incident Response Sprint",
-    type: "黑客松/演讲",
-    tags: ["B", "C"],
-    deadline: "2026-09-11 至 2026-09-13",
-    deadlineLabel: "活动举办日期（线上+线下均可参加）",
-    matchScore: 4,
-    status: "开放报名",
-    link: "https://apartresearch.com/sprints/ai-incident-response-sprint-2026-09-11-to-2026-09-13",
-    note: "周末的 AI 安全黑客松，主题直接对口 AI Security（事件响应），不需要提前很久准备，无需 AI safety 背景。表现好的团队可以被邀请申请 Apart Fellowship（3-6个月，含资金+导师+发表支持），是认识 AI safety 圈子和积累项目经验的低成本高性价比方式。"
-  },
-  {
-    title: "Apart Research · Digital Minds Research Sprint",
-    type: "黑客松/演讲",
-    tags: ["B", "C"],
-    deadline: "2026-08-14 至 2026-08-16",
-    deadlineLabel: "本周末举办",
-    matchScore: 3,
-    status: "即将开始，报名从速",
-    link: "https://apartresearch.com/sprints/digital-minds-research-sprint-2026-08-14-to-2026-08-16",
-    note: "这周末就开始，主题是 AI 偏好/意识/内省能力的实证研究，和你的主方向不完全重合，但作为'低门槛试水一次 AI safety hackathon'的机会很合适，时间紧就当练手，观察 Apart Research 这个社区的运作方式，为后面参加更对口的 sprint（比如9月的 Incident Response）做准备。"
-  },
-  {
-    title: "CCF YOCSEF（青年计算机科技论坛）委员 / 报告人 长期通道",
-    type: "演讲/论坛",
-    tags: ["B", "C"],
-    deadline: "长期开放申请，无固定截止",
-    deadlineLabel: "长期发展渠道",
-    matchScore: 3,
-    status: "常年开放",
-    link: "https://www.ccf.org.cn/YOCSEF/2026-01-08/856596.shtml",
-    note: "CCF 官方的青年学者思辨/交流平台，遍布全国近30个城市分论坛，42周岁以下均可申请成为委员。不是一次性投稿，而是长期经营的国内学术人脉入口——先申请加入你所在城市的分论坛做委员，参与几次'观点论坛'活动，逐步积累到自己主讲或组织论坛的机会。"
-  }
 ];
