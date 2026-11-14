@@ -1,6 +1,6 @@
-// 机会数据源。每日自动化更新于 2026-11-13：基于 11/12 分支；AISC 队员窗今日开放；Epistemics 今日开赛；SPAR Spring 官网锁定 12/16–1/13；上海 AI Lab 安全岗补 ?mode=campus；OR/HotCRP 复核仍开；主列表 25 条。
+// 机会数据源。每日自动化更新于 2026-11-14：基于 11/13 分支；Epistemics Day2/提交明日；AISC 队员窗续开；Lexsi/Algoverse/BlueDot Gov/Humanoids 约1天；CVPR/Meta-alignment 约2天；挑战杯补常州大学 11/22、无锡学院 11/20·11/30；OR/HotCRP 复核仍开；主列表 25 条。
 // tags: A=学术产出 B=公开曝光 C=资源网络 D=履历里程碑
-const LAST_UPDATED = "2026-11-13";
+const LAST_UPDATED = "2026-11-14";
 
 const OPPORTUNITIES = [
   // ---- 今日最紧迫 ----
@@ -9,42 +9,31 @@ const OPPORTUNITIES = [
     type: "黑客松/演讲",
     tags: ["B", "C"],
     deadline: "2026-11-13 至 2026-11-15",
-    deadlineLabel: "活动举办日期（线上 + Saarbrücken hub；提交截止 11/15 AoE；今日开赛）",
+    deadlineLabel: "活动举办日期（线上 + Saarbrücken hub；提交截止 11/15 AoE；今日 Day 2）",
     matchScore: 4,
-    status: "进行中（今日 Kickoff）",
+    status: "进行中（Day 2 · 提交明日截止）",
     link: "https://apartresearch.com/sprints/ai-x-epistemics-research-sprint-2026-11-13-to-2026-11-15",
-    note: "模型置信/可验证性/信任基础设施，贴合 LLM reasoning×安全。立刻进 Discord 组队并带上 1 页 claim-verification 基准提纲；提交卡 11/15 AoE；Saarbrücken hub 见 luma.com/o9ra0uoq。"
-  },
-  {
-    title: "AI Safety Camp · Virtual 2027（第12届 · 队员申请）",
-    type: "导师匹配 Mentorship",
-    tags: ["A", "B", "C"],
-    deadline: "2026-11-29",
-    deadlineLabel: "队员申请今日 11/13 开放–11/29 截止；项目榜今日起上线官网；队长选人至 12/20；项目期 2027-01-11 至 04-18（线上，≥10h/周）",
-    matchScore: 5,
-    status: "今日开放申请",
-    link: "https://www.aisafety.camp/",
-    note: "3 个月远程组队做预选 AI safety 项目。今天打开 aisafety.camp 浏览今日上线的项目榜，优先勾 agent security / multi-agent / eval，按 ≥10h/周 写一页动机+可复用代码/论文证据并投出。"
+    note: "模型置信/可验证性/信任基础设施，贴合 LLM reasoning×安全。今天在 Discord 锁题并跑通最小 claim-verification 原型，明天 11/15 AoE 前提交；Saarbrücken hub 见 luma.com/o9ra0uoq。"
   },
   {
     title: "Lexsi · AI Safety and Alignment Hackathon（× Cohere Labs / Hugging Face）",
     type: "黑客松/演讲",
     tags: ["B", "C", "D"],
     deadline: "2026-11-15",
-    deadlineLabel: "报名 11/8 已关；线上黑客松进行中（11/1–22）；提交 11/15 23:59 AoE；短名单 11/16；决赛材料至 11/22；含 Red Teaming / Agentic Fine-tuning 赛道",
+    deadlineLabel: "报名 11/8 已关；线上黑客松进行中（11/1–22）；提交 11/15 23:59 AoE（约1天）；短名单 11/16；决赛材料至 11/22；含 Red Teaming / Agentic Fine-tuning 赛道",
     matchScore: 5,
-    status: "进行中（报名已关；盯提交·约2天）",
+    status: "进行中（报名已关；盯提交·约1天）",
     link: "https://hackathon.lexsi.ai/",
-    note: "若已报名：今晚锁定 Red Teaming 或 Agentic Fine-tuning，把 before/after 指标与公开 HF collection 准备好，赶 11/15 AoE 提交；未报名则全力打 Epistemics 并预留 Threat Intel 12/4–6。"
+    note: "若已报名：今天锁定 Red Teaming 或 Agentic Fine-tuning，把 before/after 指标与公开 HF collection/repo 准备好，赶 11/15 AoE 提交；未报名则全力打 Epistemics 并预留 Threat Intel 12/4–6。"
   },
   {
     title: "BlueDot Impact · Frontier AI Governance Course（下一期 cohort）",
     type: "演讲/论坛",
     tags: ["B", "C"],
     deadline: "2026-11-15",
-    deadlineLabel: "官网 soonestDeadline=15 Nov；下一期 intensive 约 11/23–28、part-time 约 11/23–1/3；免费约 40 小时；申请见课程页 Apply",
+    deadlineLabel: "官网 soonestDeadline=15 Nov（约1天）；下一期 intensive 约 11/23–28、part-time 约 11/23–1/3；免费约 40 小时；申请见课程页 Apply",
     matchScore: 4,
-    status: "开放中（约2天）",
+    status: "开放中（约1天）",
     link: "https://bluedot.org/courses/ai-governance",
     note: "免费前沿 AI 治理课（证据评估/机构地图/策略辩论），适合作 GovAI/Pathfinder 前置训练。今天在 bluedot.org/courses/ai-governance 选 intensive 或 part-time 提交申请；技术向另见主列表 Technical AI Safety。"
   },
@@ -53,9 +42,9 @@ const OPPORTUNITIES = [
     type: "导师匹配 Mentorship",
     tags: ["A", "C", "D"],
     deadline: "2026-11-15",
-    deadlineLabel: "Spring 2027 申请截止 Sunday Nov 15 23:59 PT（≈11/16 07:59 UTC）；免费（Open Phil 资助）；含 Trial Week + 组队发论文",
+    deadlineLabel: "Spring 2027 申请截止 Sunday Nov 15 23:59 PT（≈11/16 07:59 UTC；约1天）；免费（Open Phil 资助）；含 Trial Week + 组队发论文",
     matchScore: 5,
-    status: "开放中（约2天）",
+    status: "开放中（约1天）",
     link: "https://algoverseairesearch.org/ai-safety-fellowship",
     note: "面向大学生/从业者做可发表 AI safety 研究（忽略页上残留的 Applications Closed for 2026 / Jan 2026 旧文案，以横幅 Nov 15 PT 为准）。今天交申请并备 coding challenge 素材；材料可与 SPAR/PRISM EOI 复用。"
   },
@@ -64,9 +53,9 @@ const OPPORTUNITIES = [
     type: "会议 Workshop",
     tags: ["A", "B", "C"],
     deadline: "2026-11-15",
-    deadlineLabel: "官网 Paper & Demo Nov 15 23:59 AoE；OpenReview due ≈11/17 11:59 UTC（alias Trustworthy_Humanoid_Systems；11/13 复核仍开放；滚动审 11/2–11/20）；会期 12/7 圣克拉拉",
+    deadlineLabel: "官网 Paper & Demo Nov 15 23:59 AoE；OpenReview due ≈11/17 11:59 UTC（alias Trustworthy_Humanoid_Systems；11/14 复核仍开放；滚动审 11/2–11/20）；会期 12/7 圣克拉拉",
     matchScore: 5,
-    status: "开放中（约2天）",
+    status: "开放中（约1天）",
     link: "https://humanoid-safety-assurance.paiagent.ai/humanoids2026/",
     note: "具身/人形机器人系统级安全与 assurance（规划控制×运行时监督×人机接触），贴合 Embodied AI×AI Security。今天把 runtime monitor / failure recovery / 安全评测短文按 IEEE 双栏投 openreview.net/group?id=IEEE.org/RAS/Humanoids/2026/Workshop/Trustworthy_Humanoid_Systems（非归档、单盲）；有 demo 可同步交，标题含 Demo。"
   },
@@ -75,29 +64,40 @@ const OPPORTUNITIES = [
     type: "顶会",
     tags: ["A", "D"],
     deadline: "2026-11-16",
-    deadlineLabel: "Paper Registration 11/10 AoE 已过；正文 11/16 AoE（补充材料 11/23）；Workshop 提案 11/4 已过",
+    deadlineLabel: "Paper Registration 11/10 AoE 已过；正文 11/16 AoE（约2天；补充材料 11/23）；Workshop 提案 11/4 已过",
     matchScore: 4,
-    status: "开放中（正文约3天；注册已截止）",
+    status: "开放中（正文约2天；注册已截止）",
     link: "https://cvpr.thecvf.com/Conferences/2027/Dates",
-    note: "若已完成 Paper Registration：本周锁稿投 openreview.net/group?id=thecvf.com/CVPR/2027/Conference（11/16 AoE）；未注册则本轮主会已无提交资格，改盯 AAAI-27 workshop（11/20）与 ICLR 2027 workshop CFP（约 11/29 通知后）。"
+    note: "若已完成 Paper Registration：周末锁稿投 openreview.net/group?id=thecvf.com/CVPR/2027/Conference（11/16 AoE）；未注册则本轮主会已无提交资格，改盯 AAAI-27 workshop（11/20）与 ICLR 2027 workshop 录取通知（约 11/29）。"
   },
   {
     title: "AAAI-27 Workshop · Embodied AI Meta-alignment（When / How / With Whom to Align）",
     type: "会议 Workshop",
     tags: ["A", "B", "C"],
     deadline: "2026-11-16",
-    deadlineLabel: "官网 Nov 16 23:59 AoE；HotCRP Deadline ≈11/17 11:59 UTC（11/13 复核 submissions open）；通知 12/2；会期 2027-02-22/23 蒙特利尔",
+    deadlineLabel: "官网 Nov 16 23:59 AoE；HotCRP Deadline ≈11/17 11:59 UTC（11/14 复核 submissions open）；通知 12/2；会期 2027-02-22/23 蒙特利尔",
     matchScore: 5,
-    status: "开放中（约3天）",
+    status: "开放中（约2天）",
     link: "https://embodied-meta-alignment.pages.dev/",
-    note: "具身智能×对齐元问题（安全/规范/多方目标权衡），直打 Embodied AI×AI Security。本周把具身安全/偏好冲突短文（position 2–4 页或 full 6–8 页，双盲 AAAI 格式）投 https://embodied-meta-alignment-2026.hotcrp.com/。"
+    note: "具身智能×对齐元问题（安全/规范/多方目标权衡），直打 Embodied AI×AI Security。周末把具身安全/偏好冲突短文（position 2–4 页或 full 6–8 页，双盲 AAAI 格式）投 https://embodied-meta-alignment-2026.hotcrp.com/。"
+  },
+  {
+    title: "AI Safety Camp · Virtual 2027（第12届 · 队员申请）",
+    type: "导师匹配 Mentorship",
+    tags: ["A", "B", "C"],
+    deadline: "2026-11-29",
+    deadlineLabel: "队员申请 11/13 已开–11/29 截止（约15天）；项目榜 11/13–14 起上线（官网可能滞后）；队长选人至 12/20；项目期 2027-01-11 至 04-18（线上，≥10h/周）",
+    matchScore: 5,
+    status: "开放中（约15天）",
+    link: "https://www.aisafety.camp/",
+    note: "3 个月远程组队做预选 AI safety 项目。今天打开 aisafety.camp 浏览已上线项目榜（页未出则盯 Updates），优先勾 agent security / multi-agent / eval，按 ≥10h/周 写一页动机+可复用代码/论文证据并投出。"
   },
   {
     title: "'挑战杯'第二十届全国大学生课外学术科技作品竞赛（2027 届）",
     type: "竞赛",
     tags: ["A", "D"],
     deadline: "2026 年内校级选拔陆续启动（各校不同，通常 11 月前后），国赛在 2027 年",
-    deadlineLabel: "多校校级选拔持续推进（华南理工学院摸排 11/19、正式推选 12/19；黄山学院报送约 11/30；常州大学等院赛材料约 11/15；上海立信等申报书约 12/16），需主动联系学院确认本校时间表",
+    deadlineLabel: "多校校级选拔持续推进（华南理工学院摸排 11/19、正式推选 12/19；常州大学学院报送 11/22；无锡学院院赛 11/20、材料 11/30；黄山学院报送约 11/30；上海立信等申报书约 12/16），需主动联系学院确认本校时间表",
     matchScore: 5,
     status: "校级选拔阶段（因校而异）",
     link: "https://www.tiaozhanbei.net/timing",
@@ -108,9 +108,9 @@ const OPPORTUNITIES = [
     type: "会议 Workshop",
     tags: ["A", "B", "C"],
     deadline: "2026-11-20",
-    deadlineLabel: "官网 Nov 20 AoE；OpenReview due ≈11/21 11:59 UTC（alias LoyalAgents；11/13 复核仍开放）；通知 12/2；camera-ready 1/15；会期 2027-02-22/23 蒙特利尔",
+    deadlineLabel: "官网 Nov 20 AoE；OpenReview due ≈11/21 11:59 UTC（alias LoyalAgents；11/14 复核仍开放）；通知 12/2；camera-ready 1/15；会期 2027-02-22/23 蒙特利尔",
     matchScore: 5,
-    status: "开放中（约7天）",
+    status: "开放中（约6天）",
     link: "https://loyalagents.github.io/aaai27/",
     note: "agent 对用户的忠诚/权限门控/委托身份/利益冲突，补上「对公众安全 ≠ 对用户忠诚」缺口，贴合 TOPOSHIELD。≤8 页 AAAI、单盲、非归档，投 openreview.net/group?id=AAAI.org/2027/Workshop/LoyalAgents；可把攻防短文改写成 permission gate / attribution / inducement 评测。"
   },
@@ -119,9 +119,9 @@ const OPPORTUNITIES = [
     type: "会议 Workshop",
     tags: ["A", "B", "C"],
     deadline: "2026-11-20",
-    deadlineLabel: "官网 Nov 20 AoE；OpenReview due ≈11/21 11:59 UTC（alias LAUT；11/13 复核仍开放）；通知 12/2；会期 2027-02-22/23 蒙特利尔",
+    deadlineLabel: "官网 Nov 20 AoE；OpenReview due ≈11/21 11:59 UTC（alias LAUT；11/14 复核仍开放）；通知 12/2；会期 2027-02-22/23 蒙特利尔",
     matchScore: 5,
-    status: "开放中（约7天）",
+    status: "开放中（约6天）",
     link: "https://llm-agents-under-threat.github.io/",
     note: "直打 prompt injection / tool misuse / multi-agent collusion / 安全 agent 架构，与 TOPOSHIELD 高度重合。本周把 agent 攻防短文（≤7页、单盲、非归档）投 openreview.net/group?id=AAAI.org/2027/Workshop/LAUT。"
   },
@@ -130,9 +130,9 @@ const OPPORTUNITIES = [
     type: "会议 Workshop",
     tags: ["A", "B", "C"],
     deadline: "2026-11-20",
-    deadlineLabel: "官网 Nov 20 AoE；OpenReview due ≈11/21 13:00 UTC（11/13 复核仍开放）；通知 12/2；会期 2027-02-22/23 蒙特利尔",
+    deadlineLabel: "官网 Nov 20 AoE；OpenReview due ≈11/21 13:00 UTC（11/14 复核仍开放）；通知 12/2；会期 2027-02-22/23 蒙特利尔",
     matchScore: 5,
-    status: "开放中（约7天）",
+    status: "开放中（约6天）",
     link: "https://trust4rsi-agent.github.io/AAAI2027/",
     note: "把 agent 演化可信性当 OS/系统问题（记忆溯源、工具沙箱、策略回滚、多智能体共演化）。优先投 LAUT/LoyalAgents 后，列可扩短文投 openreview.net/group?id=AAAI.org/2027/Workshop/Trust4RSI-Agent。"
   },
@@ -141,9 +141,9 @@ const OPPORTUNITIES = [
     type: "会议 Workshop",
     tags: ["A", "B", "C"],
     deadline: "2026-11-20",
-    deadlineLabel: "官网 Nov 20 AoE；OpenReview due ≈11/21 10:59 UTC（11/13 复核仍开放）；通知 12/11；AAAI 拒稿 fast track 另约 12/2 AoE；会期 2027-02 蒙特利尔",
+    deadlineLabel: "官网 Nov 20 AoE；OpenReview due ≈11/21 10:59 UTC（11/14 复核仍开放）；通知 12/11；AAAI 拒稿 fast track 另约 12/2 AoE；会期 2027-02 蒙特利尔",
     matchScore: 5,
-    status: "开放中（约7天）",
+    status: "开放中（约6天）",
     link: "http://aics.site/AICS2027/cfp.html",
     note: "主题直打 AI 系统安全/对抗鲁棒/红队/多智能体博弈安全，非匿名投稿。把 agent/jailbreak/红队短文投 openreview.net/group?id=AAAI.org/2027/Workshop/AICS；未赶上可盯 12/2 AAAI 拒稿 fast track。"
   },
@@ -152,9 +152,9 @@ const OPPORTUNITIES = [
     type: "演讲/论坛",
     tags: ["A", "B", "C"],
     deadline: "2026-11-22",
-    deadlineLabel: "官网 soonestDeadline=22 Nov；下一期 intensive 约 11/30–12/5（申请至 11/22）、part-time 约 12/7–1/17（申请至 11/29）；免费；需具备 LLM 训练/微调基础",
+    deadlineLabel: "官网 soonestDeadline=22 Nov（约8天）；下一期 intensive 约 11/30–12/5（申请至 11/22）、part-time 约 12/7–1/17（申请至 11/29）；免费；需具备 LLM 训练/微调基础",
     matchScore: 5,
-    status: "开放中（约9天）",
+    status: "开放中（约8天）",
     link: "https://bluedot.org/courses/technical-ai-safety",
     note: "比 Governance 更贴技术对齐/评测/AI control。今天在 bluedot.org/courses/technical-ai-safety 选 11/22 前的 intensive；若时间紧可改申 11/29 part-time，并与 Algoverse/GovAI 文书错峰。"
   },
@@ -165,7 +165,7 @@ const OPPORTUNITIES = [
     deadline: "2026-11-22",
     deadlineLabel: "UK Research/Applied：11/22 23:59 GMT；DC Summer：11/22 23:59 EST；项目期 2027-06-07 至 08-27（伦敦或华盛顿）",
     matchScore: 4,
-    status: "开放中（约9天）",
+    status: "开放中（约8天）",
     link: "https://www.governance.ai/opportunities",
     note: "AI governance 三个月全职 fellowship（UK 可签临时工签；DC 需美国工作许可）。技术向优先填 Research Track；材料本周起草，与 Algoverse/Pathfinder/BlueDot 错峰提交，截止前在 governance.ai/opportunities 投递。"
   },
@@ -174,9 +174,9 @@ const OPPORTUNITIES = [
     type: "导师匹配 Mentorship",
     tags: ["B", "C", "D"],
     deadline: "2026-11-24",
-    deadlineLabel: "申请窗 11/10–11/24 23:59 AoE；录取 12/2；Kickoff mentee 12/6",
+    deadlineLabel: "申请窗 11/10–11/24 23:59 AoE（约10天）；录取 12/2；Kickoff mentee 12/6",
     matchScore: 4,
-    status: "开放中（约11天）",
+    status: "开放中（约10天）",
     link: "https://pathfinder.kairos-project.org/",
     note: "面向带领/筹建高校 AI safety·policy 社团的学生（本科可申，无个人津贴但可拿社团经费）。今天打开官网申请页，按社团现状/学期计划/个人角色写一稿并先提交，11/24 前可迭代。"
   },
@@ -185,11 +185,11 @@ const OPPORTUNITIES = [
     type: "黑客松/演讲",
     tags: ["B", "C"],
     deadline: "2026-12-04 至 2026-12-06",
-    deadlineLabel: "活动举办日期（线上；提交截止 12/6 AoE；与 Security Level 5 合办）",
+    deadlineLabel: "活动举办日期（线上；提交截止 12/6 AoE；与 Security Level 5 合办；另有 Israel hub）",
     matchScore: 5,
     status: "开放报名",
     link: "https://apartresearch.com/sprints/threat-intelligence-threat-modelling-2026",
-    note: "用 LLM 规模化威胁情报/威胁建模，服务前沿 AI 数据中心对抗国家级攻击——直接贴 AI Security。今天报名；先打 Epistemics，再预留 12/4–6（在 Attribution 之前），起草 1 页 AI-assisted threat model 提纲。"
+    note: "用 LLM 规模化威胁情报/威胁建模，服务前沿 AI 数据中心对抗国家级攻击——直接贴 AI Security。今天报名；先打完 Epistemics/Lexsi，再预留 12/4–6（在 Attribution 之前），起草 1 页 AI-assisted threat model 提纲。"
   },
   {
     title: "Apart Research · Agent Attribution Hackathon",
@@ -198,7 +198,7 @@ const OPPORTUNITIES = [
     deadline: "2026-12-11 至 2026-12-13",
     deadlineLabel: "官网已改期：12/11–13 线上（提交截止 12/13 AoE；原 11/27–29 不再适用；另有 Tel Aviv jam site）",
     matchScore: 5,
-    status: "开放报名（改期·约28天）",
+    status: "开放报名（改期·约27天）",
     link: "https://apartresearch.com/sprints/agent-attribution-2026",
     note: "区分 rogue agent vs 人控 agent 的归因/检测/逃逸，直打 agent security。今天报名；日程 Epistemics→Threat Intel（12/4）→Attribution（12/11），预写 1 页 attribution classifier 提纲。"
   },
@@ -209,7 +209,7 @@ const OPPORTUNITIES = [
     deadline: "2027-01-14 / 2027-01-22",
     deadlineLabel: "提交系统 1/8 开放；摘要 1/14 AoE；正文 1/22 AoE；一阶段拒稿 2/23；最终通知 5/3；会期 2027-08-02–04（Workshop 8/5–6）",
     matchScore: 5,
-    status: "开放中（距摘要约62天；官网已公布 Dates）",
+    status: "开放中（距摘要约61天；官网已公布 Dates）",
     link: "https://icml.cc/Conferences/2027/Dates",
     note: "官网已锁定摘要/正文节点。把 reasoning/安全方向下一篇主会目标对准 ICML；本周列可投稿工作清单，并在 1/8 前提前建好 OpenReview 账号（Suggested Account Creation 同日）。"
   },
@@ -224,7 +224,7 @@ const OPPORTUNITIES = [
     matchScore: 5,
     status: "关注中（Fall 已关；Spring 12/16 开窗）",
     link: "https://sparai.org/",
-    note: "11/13 复核：Spring 学员窗锁定 12/16–1/13。立刻点 Express interest；同步 prism-research.org 填 Fellow EOI。校园社团负责人另见主列表 Pathfinder；AISC 队员窗今日已开可并行投。"
+    note: "11/14 复核：Spring 学员窗仍锁定 12/16–1/13。立刻点 Express interest；同步 prism-research.org 填 Fellow EOI。校园社团负责人另见主列表 Pathfinder；AISC 队员窗已开可并行投。"
   },
 
   // ---- 实验室实习 ----
