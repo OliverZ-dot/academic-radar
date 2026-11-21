@@ -1,7 +1,20 @@
 // 已过期超过 7 天（或为主列表腾位）的机会归档。主列表保持精简，此处仅供回溯查阅。
-const ARCHIVE_UPDATED = "2026-11-20";
+const ARCHIVE_UPDATED = "2026-11-21";
 
 const ARCHIVED_OPPORTUNITIES = [
+  {
+    title: "Humanoids 2026 Workshop · Trustworthy Humanoid Systems（From Capability to Assurance）",
+    type: "会议 Workshop",
+    tags: ["A", "B", "C"],
+    deadline: "2026-11-19 / 2026-11-20",
+    deadlineLabel: "官网 Paper & Demo Nov 19 23:59 AoE；OpenReview due ≈11/20 11:59 UTC；11/21 复核 InvitationExpired；会期 12/7 圣克拉拉",
+    matchScore: 5,
+    status: "已截止（OR InvitationExpired）",
+    link: "https://humanoid-safety-assurance.paiagent.ai/humanoids2026/",
+    note: "投稿窗已关。若已投：等滚动录用/参会安排；未投则改打仍开放的 Meta-alignment（至 11/24）、LAUT/Agentic_Labs（至 ≈11/28）与 ICLR Blog Posts（12/1）。",
+    archivedAt: "2026-11-21",
+    archiveReason: "OpenReview InvitationExpired；主列表腾位给即将开窗的 AAAI-27 Student Scholar/Volunteer（11/30–12/4 ET）"
+  },
   {
     title: "Algoverse · AI Safety Fellowship Spring 2027",
     type: "导师匹配 Mentorship",
