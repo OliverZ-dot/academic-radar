@@ -1,7 +1,20 @@
 // 已过期超过 7 天（或为主列表腾位）的机会归档。主列表保持精简，此处仅供回溯查阅。
-const ARCHIVE_UPDATED = "2026-11-21";
+const ARCHIVE_UPDATED = "2026-11-22";
 
 const ARCHIVED_OPPORTUNITIES = [
+  {
+    title: "AAAI-27 Workshop · Trust4RSI-Agent（Trustworthy Evolution of AI Agents）",
+    type: "会议 Workshop",
+    tags: ["A", "B", "C"],
+    deadline: "2026-11-20 / 2026-11-21",
+    deadlineLabel: "官网 Nov 20 AoE；OpenReview due ≈11/21 13:00 UTC；11/22 复核 InvitationExpired；通知 12/2；会期 2027-02-22/23 蒙特利尔",
+    matchScore: 5,
+    status: "已截止（OR InvitationExpired）",
+    link: "https://trust4rsi-agent.github.io/AAAI2027/",
+    note: "投稿窗已关。若已投：等 12/2 通知；未投则改打仍开放的 LoyalAgents/LAUT（至 Nov 27 AoE）、Meta-alignment（至 11/24）与 Agentic_Labs（至 ≈11/28）。",
+    archivedAt: "2026-11-22",
+    archiveReason: "OpenReview InvitationExpired；主列表腾位给 DataCon2026（报名至 11/28）"
+  },
   {
     title: "Humanoids 2026 Workshop · Trustworthy Humanoid Systems（From Capability to Assurance）",
     type: "会议 Workshop",
