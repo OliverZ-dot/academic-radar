@@ -1,7 +1,20 @@
 // 已过期超过 7 天（或为主列表腾位）的机会归档。主列表保持精简，此处仅供回溯查阅。
-const ARCHIVE_UPDATED = "2026-11-22";
+const ARCHIVE_UPDATED = "2026-11-23";
 
 const ARCHIVED_OPPORTUNITIES = [
+  {
+    title: "GovAI · Summer Fellowship 2027（UK Research/Applied + DC）",
+    type: "Fellowship",
+    tags: ["B", "C", "D"],
+    deadline: "2026-11-22",
+    deadlineLabel: "UK Research/Applied：11/22 23:59 GMT 已过；DC Summer：11/22 23:59 EST（≈11/23 04:59 UTC）；项目期 2027-06-07 至 08-27",
+    matchScore: 4,
+    status: "已截止",
+    link: "https://www.governance.ai/opportunities",
+    note: "申请窗已关。若已提交：等录取/面试通知；未提交则改打仍开放的 AISC（至 11/29）、Pathfinder（至 11/24）、SPAR EOI（学员 12/16 开）与 BlueDot Tech（至 11/29/12/6）。",
+    archivedAt: "2026-11-23",
+    archiveReason: "UK 截止已过；主列表腾位给 BlueDot Technical AI Safety Project Sprint（申请至 12/27）"
+  },
   {
     title: "AAAI-27 Workshop · Trust4RSI-Agent（Trustworthy Evolution of AI Agents）",
     type: "会议 Workshop",
