@@ -1,7 +1,33 @@
 // 已过期超过 7 天（或为主列表腾位）的机会归档。主列表保持精简，此处仅供回溯查阅。
-const ARCHIVE_UPDATED = "2026-11-25";
+const ARCHIVE_UPDATED = "2026-11-26";
 
 const ARCHIVED_OPPORTUNITIES = [
+  {
+    title: "AAAI-27 Workshop · Embodied AI Meta-alignment（When / How / With Whom to Align）",
+    type: "会议 Workshop",
+    tags: ["A", "B", "C"],
+    deadline: "2026-11-24",
+    deadlineLabel: "官网 Nov 24 23:59 AoE；HotCRP Deadline ≈11/25 11:59 UTC；11/26 复核 HotCRP open:false；通知 12/2；会期 2027-02-22/23 蒙特利尔",
+    matchScore: 5,
+    status: "已截止（HotCRP 已关）",
+    link: "https://embodied-meta-alignment.pages.dev/",
+    note: "投稿窗已关。若已投：等 12/2 通知；未投则改打仍开放的 LoyalAgents/LAUT/Agentic_Labs（至 Nov 27 AoE / OR ≈11/28）与 AICS fast track（约 12/2）。",
+    archivedAt: "2026-11-26",
+    archiveReason: "HotCRP open:false（Deadline 已过）；主列表腾位给 MSRA Visual Computing Intern"
+  },
+  {
+    title: "Pathfinder Fellowship · Spring 2027（Kairos · 校园 AI Safety/Policy 社团负责人）",
+    type: "导师匹配 Mentorship",
+    tags: ["B", "C", "D"],
+    deadline: "2026-11-24",
+    deadlineLabel: "申请窗 11/10–11/24 23:59 AoE 已过；录取 12/2；Kickoff mentee 12/6",
+    matchScore: 4,
+    status: "已截止",
+    link: "https://pathfinder.kairos-project.org/",
+    note: "申请窗已关。若已提交：等 12/2 录取；未提交则改打 AISC 队员窗（至 11/29）、SPAR EOI（学员 12/16 开）与 PRISM Fellow EOI（Fellow 窗 12/14–1/8）。",
+    archivedAt: "2026-11-26",
+    archiveReason: "11/24 AoE 已过；主列表腾位给 PRISM AI Safety Fellowship（Fellow EOI）"
+  },
   {
     title: "CVPR 2027",
     type: "顶会",
