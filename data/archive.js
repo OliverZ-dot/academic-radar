@@ -1,7 +1,33 @@
 // 已过期超过 7 天（或为主列表腾位）的机会归档。主列表保持精简，此处仅供回溯查阅。
-const ARCHIVE_UPDATED = "2026-11-26";
+const ARCHIVE_UPDATED = "2026-11-28";
 
 const ARCHIVED_OPPORTUNITIES = [
+  {
+    title: "BlueDot Impact · Frontier AI Governance Course（下一期 cohort）",
+    type: "演讲/论坛",
+    tags: ["B", "C"],
+    deadline: "2026-12-06",
+    deadlineLabel: "11/15 AoE 申请窗已过；下一窗 intensive 12/14–19 申请至 12/6 AoE（另有 1/4–9 intensive / 1/4–2/14 part-time 申请至 12/27）；免费约 40 小时",
+    matchScore: 4,
+    status: "开放中（下一窗约8天·主列表腾位）",
+    link: "https://bluedot.org/courses/ai-governance",
+    note: "治理向课程：若仍想申，直接开 bluedot.org/courses/ai-governance 投 12/14–19 intensive（至 12/6）；技术向优先 BlueDot Technical AI Safety（part-time 至 11/29；intensive 至 12/6）。",
+    archivedAt: "2026-11-28",
+    archiveReason: "主列表腾位给 NDSS STALA 2027（更高匹配度的 agent 安全测试 CFP）"
+  },
+  {
+    title: "BlueDot Impact · Deep Field Fellowship（SF 全职 · EOI）",
+    type: "导师匹配 Mentorship",
+    tags: ["B", "C", "D"],
+    deadline: "待公布（下一轮 2027-02-01 至 03-26）",
+    deadlineLabel: "申请尚未开放；下一轮 2027-02-01–03-26 旧金山全职 8 周；另有 3/8–4/30、4/12–6/4 轮次；机票/住宿/餐饮覆盖，符合签证规则可有 $10k 津贴；现可填 Express interest",
+    matchScore: 5,
+    status: "关注中（申请未开·EOI 已可填·主列表腾位）",
+    link: "https://bluedot.org/programs/deep-field",
+    note: "申请未开：若尚未填 EOI，今天打开官网 Express interest；开窗后再回主列表。并行 Technical AI Safety（至 11/29/12/6）抬高信号。",
+    archivedAt: "2026-11-28",
+    archiveReason: "申请窗未开且 EOI 可异步完成；主列表腾位给 WASST 2027（Web 智能体安全 workshop）"
+  },
   {
     title: "AAAI-27 Workshop · Embodied AI Meta-alignment（When / How / With Whom to Align）",
     type: "会议 Workshop",
